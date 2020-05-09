@@ -27,7 +27,7 @@ string Hangman::GenerateWord() {
 //shows user the guessed letters if any by looping through the main word
 //and checking each position based off the guess
 void Hangman::PrintLetters() {
-        for(int pos = 0; pos < mWord.length(); pos++) {
+        for(unsigned int pos = 0; pos < mWord.length(); pos++) {
                 if(mKnownLetters[pos] == mWord[pos]) cout << mWord[pos];
                 else cout << "_";
         }

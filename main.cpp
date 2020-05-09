@@ -19,7 +19,7 @@ int main() {
                 bool correct = 0;
 
                 //checker loop
-                for(int pos = 0; pos < hm.mWord.length(); pos++) {
+                for(unsigned int pos = 0; pos < hm.mWord.length(); pos++) {
         	        if(userGuess == hm.mWord[pos]) {
             	                hm.mKnownLetters[pos] = userGuess; // If the letter is in the word, mark it as guessed
             	                correct = 1;

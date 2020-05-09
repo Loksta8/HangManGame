@@ -20,26 +20,27 @@ My Instructions for compiling this program in Linux:
 compiler used: g++
 compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1)
 
-1)Have Hangman.hpp, Hangman.cpp, and main.cpp in the same working directory
-2)Navigate to the directory that has these 3 files and use the command below to compile and create your object file for linking with the executable:
+***1)Have _ Hangman.hpp _, _ Hangman.cpp _, and _ main.cpp _ in the same working
+directory***
+***2)Navigate to the directory that has these 3 files and use the command below to compile and create your object file for linking with the executable:***
 
-g++ -std=c++11 Hangman.cpp main.cpp -o HangmanClass
+`g++ -std=c++11 Hangman.cpp main.cpp -o HangmanClass`
 
-3)Where "HangmanClass" will be the name of the Linux executable that you are creating as your outfile.
-4)To run and play the game Run the command:
+***3)Where "HangmanClass" will be the name of the Linux executable that you are creating as your outfile.***
+***4)To run and play the game Run the command:***
 
-./HangmanClass
+`./HangmanClass`
 
-1)The same can be done with the individual files hangmangameClass.cpp and hangmaninmain.cpp.
-2)The commands for each respectively would be like this:
+***1)The same can be done with the individual files _ hangmangameClass.cpp _ and _ hangmaninmain.cpp _.***
+***2)The commands for each respectively would be like this:***
 
-g++ -std=c++11 hangmangameClass.cpp -o HangmanClass
+`g++ -std=c++11 hangmangameClass.cpp -o HangmanClass`
 
 or
 
-g++ -std=c++11 hangmaninmain.cpp -o HangmanClass
+`g++ -std=c++11 hangmaninmain.cpp -o HangmanClass`
 
-3)Do number 4 up above
-4)Remember if you made any changes don't forget to recompile.
+***3)Do number 4 up above***
+***4)Remember if you made any changes don't forget to recompile.***
 
 Hopefully this was helpful!

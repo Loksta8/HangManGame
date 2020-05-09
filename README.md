@@ -1,3 +1,4 @@
+#HANGMAN GAME
 Welcome to my first Hangman Game that I created back in 2011. When I first
 created this program it was to teach me how to use C++ to solve the problem of
 programming Hangman in the C++ Language. I did not know how Object Oriented Style
@@ -16,12 +17,14 @@ of separating them out into their unique definitions and implementations. Thank
 you and have fun using the program! Feel free to change it any way you like, or
 if you have any feedback I'm all ears for that too! Take care!
 
+***
 My Instructions for compiling this program in Linux:
-compiler used: g++
-compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1)
+compiler used: g++ .
+compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) .
+***
 
 ***1)Have _ Hangman.hpp _, _ Hangman.cpp _, and _ main.cpp _ in the same working
-directory***
+directory. ***
 ***2)Navigate to the directory that has these 3 files and use the command below to compile and create your object file for linking with the executable:***
 
 `g++ -std=c++11 Hangman.cpp main.cpp -o HangmanClass`
@@ -40,7 +43,7 @@ or
 
 `g++ -std=c++11 hangmaninmain.cpp -o HangmanClass`
 
-***3)Do number 4 up above***
+***3)Do number 4 up above.***
 ***4)Remember if you made any changes don't forget to recompile.***
 
 Hopefully this was helpful!

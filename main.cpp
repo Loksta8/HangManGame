@@ -9,7 +9,7 @@ using namespace std;
 
 //main program
 int main() {
-        Hangman hm("", 7, 1, 11);// Class Instantiation and Initialization. Change 11 to the number you have inside wordList plus 1
+        Hangman hm(11);// Class Instantiation and Initialization. Change 11 to the number you have inside wordList plus 1
         hm.mWord = hm.GenerateWord(); // Pick a random word
         char userGuess;
         while(hm.mRunning) {

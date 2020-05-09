@@ -12,7 +12,7 @@ class Hangman {
                 int mAmountOfWords; // Replace 11 with the amount of words you have in your array
         //Constructors, Destructors, and Functions
                 Hangman();
-                Hangman(std::string, int, bool, int);
+                Hangman(int);
 		~Hangman();
                 std::string GenerateWord();
                 void PrintLetters();

@@ -8,7 +8,7 @@
 using namespace std;
 
 //Constructor (Member Initialization List)
-Hangman::Hangman(string aWord, int aPlayerLives, bool aRunning, int aAmountOfWords) : mWord(aWord), mPlayerLives(aPlayerLives), mRunning(aRunning), mAmountOfWords(aAmountOfWords){
+Hangman::Hangman(int aAmountOfWords) : mWord(""), mPlayerLives(7), mRunning(1), mAmountOfWords(aAmountOfWords){
 }
 
 //Destructor

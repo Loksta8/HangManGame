@@ -34,14 +34,14 @@ directory.**
 **2. Run the program with this command and give it an integer parameter you want
 to look for. In this case *14* :**
 
-'python3 word_tool.py 14'
+`python3 word_tool.py 14`
 
 **3. Next the program will find all words with a length of 14 or greater. It
 will then proceed to ask the user if they want the words displayed. Enter one of
 the following to accept. Or anything else to not show the words and only get the
 total words if any were found.**
 
-'Y' 'y' 'YES' 'Yes' 'yes'
+`Y` `y` `YES` `Yes` `yes`
 
 **4. This is still a work in progress so one of these I'll get around to making
 this tool have more functionality.

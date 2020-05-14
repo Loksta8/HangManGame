@@ -21,7 +21,8 @@ that are of certain sizes. I also added a Boost library call that trims the whit
 with Boost setup, follow these helpful instructions located at:
 https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html .
 Thank you and have fun using the program! Feel free to change it any way you like, or if you have any feedback I'm all ears
-for that too! Take care!
+for that too! I plan on creating a CMAKE for this project eventually that will
+compile both a Windows and Linux executable. Thanks and Take care!
 
 ***
 Instructions for running Python Command-Line tool:
@@ -43,8 +44,8 @@ total words if any were found.**
 
 `Y` `y` `YES` `Yes` `yes`
 
-**4. This is still a work in progress so one of these I'll get around to making
-this tool have more functionality.
+*This is still a work in progress so one of these days I'll get around to making
+this tool have more functionality.*
 
 ***
 My Instructions for compiling this program in Linux:

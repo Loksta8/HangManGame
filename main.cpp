@@ -16,7 +16,7 @@ int main() {
         hm.mWord = hm.GenerateWord(allWords); // Pick a random word
 
         char userGuess; // Store Player's guesses
-
+        hm.Welcome(); // Print Welcome to Hangman
         while(hm.mRunning) { //Begin game
                 std::cout << "Guess a SINGLE letter: "; //BE CAREFUL NO ERROR CHECKING IF ENTERING MORE THAN ONE LETTER AT A TIME, I APOLOGIZE!
                 std::cin >> userGuess;

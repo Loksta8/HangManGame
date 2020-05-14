@@ -8599,7 +8599,7 @@ subdivision
 subject
 subjects
 sublime
-sublimedirectory
+subliminal
 submission
 submissions
 submit

@@ -10,9 +10,11 @@ It has a .hpp for the class definition file, the .cpp for the implementation fil
 to run. Hopefully this helps some people who are learning how to code so that they can see the steps necessary to incorporate
 converting their code into OOP style. I know when I first was learning to program this way it confused me. There were not many
 examples online that made sense because books and online examples mainly teach how to put everything in one file instead
-of separating them out into their unique definitions and implementations. I recently converted the code to read words from a
-word list. I also added a Boost library call that trims the white space as I read the file in. If you need help with Boost
-follow these helpful instructions https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html .
+of separating them out into their unique definitions and implementations. I recently updated the code to read words from a word
+list. You will need this word list or you could create your own. If you create your own just change the filepath location in
+the main.cpp file. The name of the word list file is called wordlist_dictionary.txt. I also added a Boost library call that
+trims the white space as I read the file in. If you need help with Boost follow these helpful instructions located at
+https://www.boost.org/doc/libs/1_61_0/more/getting_started/unix-variants.html .
 Thank you and have fun using the program! Feel free to change it any way you like, or if you have any feedback I'm all ears
 for that too! Take care!
 
@@ -22,7 +24,8 @@ compiler used: g++ .
 compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) .
 ***
 
-**1. Have _Hangman.hpp_, _Hangman.cpp_, and _main.cpp_ in the same working
+**1. Have _Hangman.hpp_, _Hangman.cpp_,  _main.cpp_, and
+_wordlist_dictionary.txt_ in the same working
 directory.**
 
 **2. Navigate to the directory that has these three files and use the command below to compile and create your object file for linking with the executable:**

@@ -32,6 +32,7 @@ class Hangman {
                 std::string GenerateWord(const std::vector<std::string>&);
                 void PrintLetters();
                 void PrintMan();
+                void PrintGuessedLetters(std::string&);
                 void PlayerLose();
                 void PlayerWin();
                 void Welcome();

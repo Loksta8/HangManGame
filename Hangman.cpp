@@ -94,8 +94,14 @@ void Hangman::PrintMan() {
         return;
 }
 
+//Function to show player the guessed letters so far
+void Hangman::PrintGuessedLetters(std::string& aGuessed){
+        std::cout << "Guessed Letters:    " << aGuessed << std::endl;
+}
+
 //Function to let player know they Won the game
 void Hangman::PlayerWin() {
+        std::cout << std::endl;
         std::cout << "Congratulations, you guessed the word correctly!" << std::endl;
         mRunning = 0;// End Game
         return;
@@ -103,6 +109,7 @@ void Hangman::PlayerWin() {
 
 //Function to let the player know they Lost the game
 void Hangman::PlayerLose() {
+        std::cout << std::endl;
         std::cout << "You lose! The word was: " << mWord << std::endl;
         mRunning = 0;// End Game
         return;

@@ -8,8 +8,7 @@
 
 //main program
 int main() {
-        std::string wordlist_path = "./test.txt"; // Relative path to word list file
-        //std::string wordlist_path = "./wordlist_dictionary.txt"; // Relative path to word list file
+        std::string wordlist_path = "./wordlist_dictionary.txt"; // Relative path to word list file
         Hangman hm(wordlist_path);// Class Instantiation and Initialization.
         std::vector<std::string> allWords = hm.GetWordList(); // Get the word list
         std::string guessed; // Used to store Players guessed words

@@ -32,25 +32,28 @@ Python version: 3.5.3
 **1. Have _word_tool.py_ and _wordlist_dictionary.txt_ in the same working
 directory.**
 
-**2. Run the program with this command and give it an integer parameter you want
-to look for. In this case *14* :**
+**2. Run the program with something similar to these commands. The args are an integer for word length, input file, output file
+name.txt parameter In this case *3* *wordlist_dictionary.txt* *newwords.txt* :**
 
-`python3 word_tool.py 14`
+`python3 word_tool.py 3 wordlist_dictionary.txt newwords.txt`
 
-**3. Next the program will find all words with a length of 14 or greater. It
-will then proceed to ask the user if they want the words displayed. Enter one of
-the following to accept. Or anything else to not show the words and only get the
+**3. Next the program will find all words with a length of 3 or less so it can
+create a new file with words that are bigger than a length of 3. It will then
+proceed to ask the user if they want the words displayed. Enter one of the
+following to accept. Or anything else to not show the words and only get the
 total words if any were found.**
 
 `Y` `y` `YES` `Yes` `yes`
 
-*This is still a work in progress so one of these days I'll get around to making
-this tool have more functionality.*
+**4. The _newwords.txt_ file is now created in the working directory you ran the python
+script in. You can now use this new file to compile with for Hangman. Just
+remember before you compile to change the filename in the main.cpp.**
 
 ***
 My Instructions for compiling this program in Linux:
 compiler used: g++ .
 compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) .
+C++ Boost library used for trimming white space.
 ***
 
 **1. Have _Hangman.hpp_, _Hangman.cpp_,  _main.cpp_, and
@@ -79,6 +82,11 @@ or
 
 **3. Do number 4 up above.**
 
-**4. Remember if you made any changes don't forget to recompile.**
+**4. This can also be built in Windows as well.**
+
+**5. Remember since Hangman.hpp requires on construction a wordlist file, then as
+long as you have that file next to your Linux or Windows executable, the game will
+run! If not you'll either segfault or it will complain that it cannot find the
+file. Have fun everybody! Thanks for playing!!!
 
 Hopefully this was helpful!

@@ -112,7 +112,8 @@ std::cout << R"(
 (_______/(_______)|/    )_)(_______)|/   \__/|/     \|   )_(   \_______)     \_/   (_______)(_______)  (_______)(_______)|/    )_)(_)
 )" << '\n';
 
-        //        std::cout << "Congratulations, you guessed the word correctly!" << std::endl;
+        std::cout << "Press Enter to quit." << std::endl;
+        std::cin.get();
         mRunning = 0;// End Game
         return;
 }
@@ -131,11 +132,15 @@ void Hangman::PlayerLose() {
                                      \/__/
 )" << '\n';
         std::cout << "You lose! The word was: " << mWord << std::endl;
+        std::cout << "Press Enter to quit.";
+        std::cin.get();
         mRunning = 0;// End Game
         return;
 }
 
 void Hangman::Welcome(){
+        std::cout << "Coded by Logan! Thanks for playing and GOOD LUCK! " << std::endl;
+        std::cout << std::endl;
         std::cout << ".##......##.########.##........######...#######..##.....##.########....########..#######.....##.....##....###....##....##..######...##.....##....###....##....## " << std::endl;
         std::cout << ".##..##..##.##.......##.......##....##.##.....##.###...###.##.............##....##.....##....##.....##...##.##...###...##.##....##..###...###...##.##...###...## " << std::endl;
         std::cout << ".##..##..##.##.......##.......##.......##.....##.####.####.##.............##....##.....##....##.....##..##...##..####..##.##........####.####..##...##..####..## " << std::endl;

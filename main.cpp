@@ -22,8 +22,8 @@ int main() {
                 std::cin.get(userGuess); // only getting the first character
 		std::cin.ignore(256, '\n'); // try and ignore everything typed afterward and up to ENTER
 		std::cin.clear(); // clear the cin bufferstream
-                guessed.push_back(userGuess); //
                 if(isalpha(userGuess)){// Try and help out the player if they enter something other than a letter
+                        guessed.push_back(userGuess); //Store only if guess is alpha numeric
                         bool correct = 0;// Keep track of player's correct guesses
                         //checker loop
                         for(unsigned int pos = 0; pos < hm.mWord.length(); pos++) {

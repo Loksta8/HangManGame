@@ -50,10 +50,10 @@ script in. You can now use this new file to compile with for Hangman. Just
 remember before you compile to change the filename in the main.cpp.**
 
 ***
-My Instructions for compiling this program in Linux:
-compiler used: g++ .
-compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) .
-C++ Boost library used for trimming white space.
+> My Instructions for compiling this program in Linux:
+> compiler used: g++ .
+> compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) .
+> C++ Boost library used for trimming white space.
 ***
 
 **1. Have _Hangman.hpp_, _Hangman.cpp_,  _main.cpp_, and
@@ -87,6 +87,6 @@ or
 **5. Remember since Hangman.hpp requires on construction a wordlist file, then as
 long as you have that file next to your Linux or Windows executable, the game will
 run! If not you'll either segfault or it will complain that it cannot find the
-file. Have fun everybody! Thanks for playing!!!
+file. Have fun everybody! Thanks for playing!!!**
 
 Hopefully this was helpful!

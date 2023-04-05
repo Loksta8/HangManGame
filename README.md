@@ -84,7 +84,7 @@ or
 
 **4. This can also be built in Windows as well.**
 
-**5. Remember since Hangman.hpp requires on construction a wordlist file, then as
+**5. Remember since _Hangman.hpp_ requires on construction a _wordlist_ file, then as
 long as you have that file next to your Linux or Windows executable, the game will
 run! If not you'll either segfault or it will complain that it cannot find the
 file. Have fun everybody! Thanks for playing!!!**

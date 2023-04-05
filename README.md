@@ -25,8 +25,8 @@ for that too! I plan on creating a CMAKE for this project eventually that will
 compile both a Windows and Linux executable. Thanks and Take care!
 
 ***
-Instructions for running Python Command-Line tool:
-Python version: 3.5.3
+> Instructions for running Python Command-Line tool:
+> Python version: 3.5.3
 ***
 
 **1. Have _word_tool.py_ and _wordlist_dictionary.txt_ in the same working

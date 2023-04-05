@@ -47,7 +47,7 @@ total words if any were found.**
 
 **4. The _newwords.txt_ file is now created in the working directory you ran the python
 script in. You can now use this new file to compile with for Hangman. Just
-remember before you compile to change the filename in the main.cpp.**
+remember before you compile to change the filename in the _main.cpp_.**
 
 ***
 > My Instructions for compiling this program in Linux:

@@ -25,8 +25,8 @@ for that too! I plan on creating a CMAKE for this project eventually that will
 compile both a Windows and Linux executable. Thanks and Take care!
 
 ***
-Instructions for running Python Command-Line tool:
-Python version: 3.5.3
+> Instructions for running Python Command-Line tool:
+> Python version: 3.5.3
 ***
 
 **1. Have _word_tool.py_ and _wordlist_dictionary.txt_ in the same working
@@ -47,13 +47,13 @@ total words if any were found.**
 
 **4. The _newwords.txt_ file is now created in the working directory you ran the python
 script in. You can now use this new file to compile with for Hangman. Just
-remember before you compile to change the filename in the main.cpp.**
+remember before you compile to change the filename in the _main.cpp_.**
 
 ***
-My Instructions for compiling this program in Linux:
-compiler used: g++ .
-compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) .
-C++ Boost library used for trimming white space.
+> My Instructions for compiling this program in Linux:
+> compiler used: g++ .
+> compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) .
+> C++ Boost library used for trimming white space.
 ***
 
 **1. Have _Hangman.hpp_, _Hangman.cpp_,  _main.cpp_, and
@@ -84,9 +84,9 @@ or
 
 **4. This can also be built in Windows as well.**
 
-**5. Remember since Hangman.hpp requires on construction a wordlist file, then as
+**5. Remember since _Hangman.hpp_ requires on construction a _wordlist_ file, then as
 long as you have that file next to your Linux or Windows executable, the game will
 run! If not you'll either segfault or it will complain that it cannot find the
-file. Have fun everybody! Thanks for playing!!!
+file. Have fun everybody! Thanks for playing!!!**
 
 Hopefully this was helpful!

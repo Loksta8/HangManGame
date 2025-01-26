@@ -57,9 +57,10 @@ remember before you compile to change the filename in the _main.cpp_.**
 ***
 
 **1. Open CMAKE and use CMakeLists.txt to build the project. If in windows navigate to the root directory where CMakeLists.txt is located. For Where to build the binaries create a 'build' folder inside the HangManGame source directory and build the binaries there. Generate the solution, open the solution, set Hangman project as the startup project build and compile. If building in Linux make a 'build' directory and change directories into the build directory. Run CMAKE inside the build directory.**
+
 `cmake ../CMakeLists.txt`
 
-**2. After cmake generates the make file in the build directory run the make command. **
+**2. After cmake generates the make file in the build directory run the make command.**
 
 `make`
 

@@ -52,43 +52,20 @@ script in. You can now use this new file to compile with for Hangman. Just
 remember before you compile to change the filename in the _main.cpp_.**
 
 ***
-> My Instructions for compiling this program in Linux:
-> compiler used: g++ .
-> compiler version: gcc version 6.3.0 20170516 (Raspbian 6.3.0-18+rpi1+deb9u1) .
-> C++ Boost library used for trimming white space.
+> My Instructions for compiling using CMAKE:
+> CMAKE version: 3.10
 ***
 
-**1. Have _Hangman.hpp_, _Hangman.cpp_,  _main.cpp_, and
-_wordlist_dictionary.txt_ in the same working
-directory.**
+**1. Open CMAKE and use CMakeLists.txt to build the project. If in windows navigate to the root directory where CMakeLists.txt is located. For Where to build the binaries create a 'build' folder inside the HangManGame source directory and build the binaries there. Generate the solution, open the solution, set Hangman project as the startup project build and compile. If building in Linux make a 'build' directory and change directories into the build directory. Run CMAKE inside the build directory.**
+`cmake ../CMakeLists.txt`
 
-**2. Navigate to the directory that has these three files and use the command below to compile and create your object file for linking with the executable:**
+**2. After cmake generates the make file in the build directory run the make command. **
 
-`g++ -std=c++11 Hangman.cpp main.cpp -o HangmanClass`
+`make`
 
-**3. Where "HangmanClass" will be the name of the Linux executable that you are creating as your outfile.**
+**3. To run and play the game make sure wordlist_dictionary.txt is in the same directory as your Hangman executable and Run the command:**
 
-**4. To run and play the game Run the command:**
+`./Hangman`
 
-`./HangmanClass`
-
-**1. The same can be done with the individual files _hangmangameClass.cpp_ and _hangmaninmain.cpp_.**
-
-**2. The commands for each respectively would be like this:**
-
-`g++ -std=c++11 hangmangameClass.cpp -o HangmanClass`
-
-or
-
-`g++ -std=c++11 hangmaninmain.cpp -o HangmanClass`
-
-**3. Do number 4 up above.**
-
-**4. This can also be built in Windows as well.**
-
-**5. Remember since _Hangman.hpp_ requires on construction a _wordlist_ file, then as
-long as you have that file next to your Linux or Windows executable, the game will
-run! If not you'll either segfault or it will complain that it cannot find the
-file. Have fun everybody! Thanks for playing!!!**
 
 Hopefully this was helpful!

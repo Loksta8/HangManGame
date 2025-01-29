@@ -7,16 +7,23 @@
 #include <ctype.h>
 #include <csignal>
 #include <stdexcept>
+#include <chrono>
+#include <thread>
 
+// Added for exiting out of the terminal cleanly with Ctrl+C 
+// Give 2 seconds of cleanup before calling exit
 volatile std::sig_atomic_t gSignalStatus;
 
+//Global ptr on stack OS will do cleanup on it's own when ptr sets running to false
 Hangman* hmPtr = nullptr;
 
+// Signal handler to catch Ctrl + C exit
 void signalHandler(int signum) {
     gSignalStatus = signum;
     if (hmPtr != nullptr) {
-        hmPtr->mRunning = 0;
+        hmPtr->SetIsRunning(false);
         std::cout << "\nCaught signal " << signum << ". Exiting the game cleanly...\n";
+        std::this_thread::sleep_for(std::chrono::seconds(2));
     }
     exit(signum);
 }
@@ -24,10 +31,10 @@ void signalHandler(int signum) {
 // Main program
 int main() {
     try {
-        // Register signal SIGINT and signal handler
+        // Register signal SIGINT and signal handler for catching Ctrl + C
         std::signal(SIGINT, signalHandler);
 
-        std::string playAgain;
+        std::string playAgain; //For endgame yes or no question
 
         do {
             std::string wordlist_path = "./wordlist_dictionary.txt"; // Relative path to word list file
@@ -40,16 +47,16 @@ int main() {
             }
 
             std::string guessed; // Used to store players' guessed words
-            hm.mWord = hm.GenerateWord(allWords); // Pick a random word
+            hm.SetWord(hm.GenerateWord(allWords)); // Pick a random word and set it
 
-            if (hm.mWord.empty()) {
+            if (hm.GetWord().empty()) {
                 throw std::runtime_error("Error: Failed to generate a word. Exiting program.");
             }
 
             char userGuess; // Store player's guesses
             hm.Welcome(); // Print Welcome to Hangman
 
-            while (hm.mRunning) { // Begin game
+            while (hm.IsRunning()) { // Begin game
                 std::cout << std::endl;
                 std::cout << "Guess a SINGLE letter: "; // Be careful: no error checking if entering more than one letter at a time, I apologize!
                 std::cout << std::endl;
@@ -59,25 +66,20 @@ int main() {
 
                 if (isalpha(userGuess)) { // Try and help out the player if they enter something other than a letter
                     guessed.push_back(userGuess); // Store only if guess is alpha-numeric
-                    bool correct = 0; // Keep track of player's correct guesses
+                    hm.SetIsCorrect(false); // Reset for each guess
+                    hm.SetKnownLetters(userGuess, hm.GetIsCorrect()); // If the letter is in the word, mark it as guessed
 
-                    // Checker loop
-                    for (unsigned int pos = 0; pos < hm.mWord.length(); pos++) {
-                        if (userGuess == hm.mWord[pos]) {
-                            hm.mKnownLetters[pos] = userGuess; // If the letter is in the word, mark it as guessed
-                            correct = 1; // Player guessed correctly
-                        }
+                    if (hm.GetIsCorrect() == false) {
+                        hm.MinusLife(); // Player guessed wrong, subtract a life
                     }
-
-                    if (correct == 0) hm.mPlayerLives--; // Player guessed wrong, subtract a life
-                    correct = 0;
+                    hm.SetIsCorrect(false);
                     hm.PrintMan(); // Displays hangman
                     hm.PrintLetters(); // Show user the correct letters guessed if any
                     std::cout << std::endl; // Formatting
                     hm.PrintGuessedLetters(guessed); // Show the player's guessed words so far
 
-                    if (hm.mPlayerLives <= 0) hm.PlayerLose(); // Player lost, end game
-                    if (hm.mKnownLetters == hm.mWord) hm.PlayerWin(); // Player won, end game
+                    if (hm.GetLives() <= 0) hm.PlayerLose(); // Player lost, end game
+                    if (hm.GetKnownLetters() == hm.GetWord()) hm.PlayerWin(); // Player won, end game
                 }
                 else {
                     std::cout << "Try entering a single letter. " << std::endl;
@@ -90,6 +92,10 @@ int main() {
 
             std::cout << "Do you want to play again? (yes/no): ";
             std::getline(std::cin, playAgain);
+
+            if (playAgain == "yes") {
+                gSignalStatus = 0;
+            }
 
         } while (playAgain == "yes" && !gSignalStatus);
     }

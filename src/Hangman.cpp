@@ -165,7 +165,7 @@ void Hangman::SetFileName(std::string& aFileName) {
     mFilename = aFileName;
 }
 
-void Hangman::SetWord(std::string& aWord) {
+void Hangman::SetWord(const std::string& aWord) {
     mWord = aWord;
     mKnownLetters = std::string(mWord.size(), '_'); // Initialize with underscores
 }

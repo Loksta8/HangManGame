@@ -39,7 +39,7 @@ class Hangman {
 
                 //setters
                 void SetFileName(std::string&);
-                void SetWord(std::string&);
+                void SetWord(const std::string&);
                 void MinusLife();
                 void SetIsRunning(bool);
                 void SetKnownLetters(char aLetter, bool aBool);

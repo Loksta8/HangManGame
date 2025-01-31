@@ -40,7 +40,7 @@ int main() {
             std::string wordlist_path = "./wordlist_dictionary.txt"; // Relative path to word list file
             Hangman hm(wordlist_path); // Class Instantiation and Initialization.
             hmPtr = &hm;
-            std::vector<std::string> allWords = hm.GetWordList(); // Get the word list
+            const std::vector<std::string> allWords = hm.GetWordList(); // Get the word list
 
             if (allWords.empty()) {
                 throw std::runtime_error("Error: The word list is empty or could not be loaded. Exiting program.");
